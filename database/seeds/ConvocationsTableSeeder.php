@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ConvocationsTableSeeder extends Seeder
+class convocationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,11 @@ class ConvocationsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+		factory(ConfirmedListsSeed::class)->create([
+			'date' => 'Pablo',
+			'time' => 'sadsadsa',
+			'stadium_id' => 1,
+			'confirmation' => '1',
+		]);
     }
 }

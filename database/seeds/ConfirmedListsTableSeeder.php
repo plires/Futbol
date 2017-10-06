@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\ConfirmedListsSeed;
 
-class ConfirmedListsTableSeeder extends Seeder
+class confirmedListSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,10 @@ class ConfirmedListsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+		factory(ConfirmedListsSeed::class)->create([
+			'date' => 'Pablo',
+			'convocation_id' => 1,
+			'user_id' => 1
+		]);
     }
 }
