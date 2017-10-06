@@ -9,6 +9,6 @@ class Stadium extends Model
 {
     public function convocation()
     {
-        return $this->belongsTo(Convocation::class, 'user_id', 'id');
+        return $this->belongsTo(Convocation::class, 'stadium_id', 'id');
     }
 }

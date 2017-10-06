@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Stadium;
 
-class StadiumsTableSeeder extends Seeder
+class stadiumSeeder extends Seeder
 {
     /**
      * Run the database seeds.
