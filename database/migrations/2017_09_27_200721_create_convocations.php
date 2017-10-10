@@ -17,10 +17,9 @@ class CreateConvocations extends Migration
             $table->increments('id');
             $table->string('date');
             $table->string('time');
-            $table->integer('stadium_id')->unsigned();
-            $table->foreign('stadium_id')->references('id')->on('stadiums');
-            $table->string('confirmation');
-            $table->rememberToken();
+            $table->integer('stage_id')->unsigned();
+            $table->foreign('stage_id')->references('id')->on('stages');
+            $table->integer('confirmation');
             $table->timestamps();
         });
     }

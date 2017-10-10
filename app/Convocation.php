@@ -2,7 +2,7 @@
 
 namespace App;
 use App\ConfirmedList;
-use App\Stadium;
+use App\Stage;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,8 +13,8 @@ class Convocation extends Model
         return $this->belongsTo(ConfirmedList::class, 'user_id', 'id');
     }
 
-    public function stadium()
+    public function stage()
     {
-        return $this->hasOne(Stadium::class, 'stadium_id', 'id');
+        return $this->hasOne(Stage::class, 'stage_id', 'id');
     }
 }

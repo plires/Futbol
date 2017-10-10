@@ -15,12 +15,10 @@ class CreateConfirmedLists extends Migration
     {
         Schema::create('confirmed_lists', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('date');
             $table->integer('convocation_id')->unsigned();
             $table->foreign('convocation_id')->references('id')->on('convocations');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

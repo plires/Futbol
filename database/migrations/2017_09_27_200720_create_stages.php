@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStadiums extends Migration
+class CreateStages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateStadiums extends Migration
      */
     public function up()
     {
-        Schema::create('stadiums', function (Blueprint $table) {
+        Schema::create('stages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('address');
-            $table->rememberToken();
+            $table->string('cp');
+            $table->string('city');
+            $table->string('state');
+            $table->string('country');
+            $table->string('phone');
             $table->timestamps();
         });
     }
@@ -29,6 +33,6 @@ class CreateStadiums extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stadiums');
+        Schema::dropIfExists('stages');
     }
 }
